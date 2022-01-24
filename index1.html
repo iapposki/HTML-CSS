@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <!-- Period "." before a selector in style means a class and not a tag -->
+    /* a hash "#" will do the same thing as period, instead of a class, it gives an id="..." which overpowers classes */
+    <style>
+        h1{
+            color: limegreen;
+            font-size: 60px;
+            font-weight: normal;
+            text-decoration: underline;
+            text-transform: uppercase;
+            border: 3px solid pink;
+        }
+        .main_brand.branding{
+            color: seagreen;
+        }
+        .branding{
+            color: red;
+            border: 2px dashed purple;
+        }
+        .blog_post_title{
+            color: black;
+        }
+        .branding-new{
+            color: pink;
+
+        }
+
+    </style>
+    
+</head>
+
+<h1>First title </h1>
+<h1 class="branding"> My brand</h1>
+<h1 class="blog_post_title">My blog post</h1>
+
+<!-- what comes at last in styles is preferred irrespective of the order of class stated in the attribute-->
+<h2 class="branding branding-new">Further testing branding</h2>
+
+<!-- More specific selectors wins over the prefferential later order selector given all the selectors are used in the class attribute-->
+<!-- Also classes are more specific than tags -->
+<h2 class="branding main_brand">This is another test that I am doing.</h2>
